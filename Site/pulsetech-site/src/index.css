@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #05070D;
+  --color-bg2: #0A0F1E;
+  --color-neon: #4FA9E1;
+  --color-deep: #0A4D8C;
+  --color-green: #2ECC71;
+  --color-tx: #F5F7FA;
+  --color-mute: #94A3B8;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body { background: #05070D; color: #F5F7FA; font-family: var(--font-sans); }
+
+/* Vidro fosco */
+.glass { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); backdrop-filter: blur(14px); }
+.glow-green { box-shadow: 0 0 24px rgba(46,204,113,.45); transition: box-shadow .3s, transform .3s; }
+.glow-green:hover { box-shadow: 0 0 40px rgba(46,204,113,.7); transform: translateY(-1px); }
+.glow-blue:hover { border-color: rgba(79,169,225,.5); box-shadow: 0 0 32px rgba(79,169,225,.2); }
+
+/* Malha de pontos */
+.dots {
+  background-image: radial-gradient(rgba(79,169,225,.35) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+}
+
+/* Esfera de vidro */
+.sphere {
+  border-radius: 50%; border: 1px solid rgba(255,255,255,.14);
+  background: radial-gradient(circle at 30% 28%, rgba(255,255,255,.35), rgba(79,169,225,.22) 30%, rgba(10,77,140,.35) 62%, rgba(5,7,13,.7));
+  box-shadow: inset -24px -32px 70px rgba(10,77,140,.6), 0 0 120px rgba(79,169,225,.25);
+  animation: float 8s ease-in-out infinite;
+}
+.pulse-path { stroke-dasharray: 600; animation: dash 3.5s linear infinite; filter: drop-shadow(0 0 6px #4FA9E1); }
+
+/* Cubo wireframe */
+.cube { position: relative; width: 160px; height: 160px; transform-style: preserve-3d; animation: spin 18s linear infinite; }
+.cube div { position: absolute; inset: 0; border: 1px solid rgba(79,169,225,.55); background: rgba(79,169,225,.04); }
+
+@keyframes float { 50% { transform: translateY(-18px); } }
+@keyframes dash { from { stroke-dashoffset: 600; } to { stroke-dashoffset: 0; } }
+@keyframes spin { to { transform: rotateX(360deg) rotateY(360deg); } }
