@@ -9,6 +9,14 @@
     <title>PulseTech</title>
   </head>
   <body>
+    <!-- Formulário invisível: serve só para o Netlify detectar os campos -->
+    <form name="contato" data-netlify="true" hidden>
+      <input type="hidden" name="form-name" value="contato" />
+      <input name="nome" />
+      <input name="email" />
+      <textarea name="mensagem"></textarea>
+    </form>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
