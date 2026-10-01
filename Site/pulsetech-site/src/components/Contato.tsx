@@ -3,7 +3,7 @@ import type { ChangeEvent, FormEvent } from 'react';
 import { Send, Mail, MessageCircle } from 'lucide-react';
 import Reveal from './Reveal';
 
-const EMAIL = 'contato@pulsetech.com.br'; // TROCAR
+const EMAIL = 'pulsetech7@outlook.com'
 const WHATSAPP = '5562982442850'; // TROCAR (DDI+DDD+número)
 
 const campo = 'glass w-full rounded-lg px-4 py-3 text-tx placeholder:text-mute outline-none transition-colors focus:border-neon/60';
