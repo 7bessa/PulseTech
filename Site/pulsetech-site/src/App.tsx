@@ -6,6 +6,7 @@ import Diferenciais from './components/Diferenciais';
 import ComoFunciona from './components/ComoFunciona';
 import Contato from './components/Contato';
 import Footer from './components/Footer';
+import Equipe from './components/Equipe'; 
 
 export default function App() {
   return (
