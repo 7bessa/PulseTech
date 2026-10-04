@@ -4,9 +4,9 @@ import Problema from './components/Problema';
 import Servicos from './components/Servicos';
 import Diferenciais from './components/Diferenciais';
 import ComoFunciona from './components/ComoFunciona';
+import Equipe from './components/Equipe';
 import Contato from './components/Contato';
 import Footer from './components/Footer';
-import Equipe from './components/Equipe'; 
 
 export default function App() {
   return (
@@ -18,6 +18,7 @@ export default function App() {
         <Servicos />
         <Diferenciais />
         <ComoFunciona />
+        <Equipe />
         <Contato />
       </main>
       <Footer />

@@ -2,6 +2,7 @@ const links = [
   { href: '#servicos', label: 'Serviços' },
   { href: '#diferenciais', label: 'Diferenciais' },
   { href: '#como-funciona', label: 'Como Funciona' },
+  { href: '#equipe', label: 'Equipe' },
   { href: '#contato', label: 'Contato' },
 ];
 
