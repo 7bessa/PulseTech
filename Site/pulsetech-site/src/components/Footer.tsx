@@ -1,3 +1,5 @@
+const currentYear = new Date().getFullYear();
+
 export default function Footer() {
   return (
     <footer className="relative bg-bg pb-10 pt-16">
@@ -14,7 +16,7 @@ export default function Footer() {
           <a href="#como-funciona" className="hover:text-tx">Como Funciona</a>
           <a href="#contato" className="hover:text-tx">Contato</a>
         </nav>
-        <small className="mt-8 block text-xs text-mute/70">© {new Date().getFullYear()} PulseTech. Todos os direitos reservados.</small>
+        <small className="mt-8 block text-xs text-mute/70">© {currentYear} PulseTech. Todos os direitos reservados.</small>
       </div>
     </footer>
   );

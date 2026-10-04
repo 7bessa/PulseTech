@@ -10,7 +10,8 @@ const campo = 'glass w-full rounded-lg px-4 py-3 text-tx placeholder:text-mute o
 
 export default function Contato() {
   const [f, setF] = useState({ nome: '', email: '', mensagem: '' });
-  const onChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setF({ ...f, [e.target.name]: e.target.value });
+  const onChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+    setF((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
   // Sem backend: abre o e-mail com os dados preenchidos
   const onSubmit = (e: FormEvent) => {
