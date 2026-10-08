@@ -52,6 +52,17 @@ const equipe: Membro[] = [
       'Apoia o cliente na adoção das ferramentas',
     ],
   },
+  {
+    nome: 'Guilherme Barros Takata',
+    cargo: 'QA / Frontend',
+    iniciais: 'Takata',
+    responsabilidades: [
+      'Desenvolve as interfaces dos dashboards',
+      'Garante experiência visual clara e intuitiva',
+      'Responsável pelos testes e qualidade das entregas',
+      'Valida se tudo funciona antes de chegar ao cliente',
+    ],
+  },
 ];
 
 export default function Equipe() {
