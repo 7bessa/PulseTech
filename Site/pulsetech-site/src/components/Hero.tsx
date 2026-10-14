@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section id="top" className="relative flex min-h-screen items-center overflow-hidden bg-bg pb-16 pt-28">
       <div className="dots absolute inset-0" />
-      <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-deep/40 blur-[120px]" />
+      <div className="absolute -left-40 top-20 hidden h-96 w-96 rounded-full bg-deep/40 blur-[120px] md:block" />
 
       {/* Layout: coluna no celular (esfera em cima), linha no PC (esfera ao lado) */}
       <div className="relative mx-auto flex w-full max-w-6xl flex-col items-start gap-10 px-5 md:flex-row md:items-center md:justify-between md:gap-12">
