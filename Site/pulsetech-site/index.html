@@ -6,6 +6,16 @@
     <meta name="theme-color" content="#05070D" />
     <meta name="description" content="Transformamos planilhas em dashboards inteligentes e processos automatizados, sem trocar todo o seu sistema." />
     <title>PulseTech — Sua operação com pulso</title>
+    <script>
+      (() => {
+        let savedTheme;
+        try { savedTheme = localStorage.getItem('pulsetech-theme'); } catch {}
+        const theme = savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
   </head>
   <body>
     <!-- Formulário invisível: serve só para o Netlify detectar os campos -->
@@ -17,6 +27,6 @@
     </form>
 
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

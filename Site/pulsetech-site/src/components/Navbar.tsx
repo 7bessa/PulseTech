@@ -8,12 +8,7 @@ const links = [
   { href: '#contato', label: 'Contato' },
 ];
 
-interface NavbarProps {
-  theme: 'light' | 'dark';
-  onToggleTheme: () => void;
-}
-
-export default function Navbar({ theme, onToggleTheme }: NavbarProps) {
+export default function Navbar() {
   return (
     <header className="glass fixed inset-x-0 top-0 z-50 border-x-0 border-t-0">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
@@ -31,13 +26,13 @@ export default function Navbar({ theme, onToggleTheme }: NavbarProps) {
         <div className="flex items-center gap-3">
           <button
             type="button"
-            onClick={onToggleTheme}
-            aria-label={theme === 'dark' ? 'Ativar tema claro' : 'Ativar tema escuro'}
-            title={theme === 'dark' ? 'Ativar tema claro' : 'Ativar tema escuro'}
-            aria-pressed={theme === 'light'}
+            data-theme-toggle
+            aria-label="Alternar tema claro ou escuro"
+            title="Alternar tema claro ou escuro"
             className="glass flex size-10 items-center justify-center rounded-lg transition-colors hover:border-neon/50"
           >
-            {theme === 'dark' ? <Sun size={18} aria-hidden="true" /> : <Moon size={18} aria-hidden="true" />}
+            <Sun size={18} data-theme-toggle-icon="light" aria-hidden="true" />
+            <Moon size={18} data-theme-toggle-icon="dark" aria-hidden="true" />
           </button>
           <a href="#contato" className="glow-green rounded-lg bg-green px-4 py-2 text-sm font-medium text-bg">Fale conosco</a>
         </div>
