@@ -22,23 +22,6 @@ themeButton?.addEventListener('click', () => {
   }
 });
 
-const revealElements = document.querySelectorAll<HTMLElement>('[data-reveal]');
-if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
-  revealElements.forEach((element) => { element.dataset.revealed = 'true'; });
-} else {
-  const revealObserver = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      if (entry.isIntersecting) {
-        (entry.target as HTMLElement).dataset.revealed = 'true';
-        revealObserver.unobserve(entry.target);
-      }
-    }
-  }, { rootMargin: '0px 0px -60px 0px' });
-
-  themeRoot.classList.add('reveal-ready');
-  revealElements.forEach((element) => revealObserver.observe(element));
-}
-
 const contactForm = document.querySelector<HTMLFormElement>('[data-contact-form]');
 contactForm?.addEventListener('submit', (event) => {
   event.preventDefault();

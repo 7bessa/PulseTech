@@ -16,7 +16,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hero-enter order-2 min-w-0 max-w-xl md:order-1">
+        <div className="order-2 min-w-0 max-w-xl md:order-1">
           <h1 className="font-display text-6xl font-bold tracking-tight md:text-7xl">PulseTech</h1>
           <p className="mt-4 font-display text-xl text-neon md:text-2xl">Sua operação com pulso. Seus dados em movimento.</p>
           <p className="mt-5 text-mute">
