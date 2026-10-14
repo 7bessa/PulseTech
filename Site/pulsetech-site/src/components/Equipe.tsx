@@ -82,11 +82,11 @@ export default function Equipe() {
   function membros() {
     return equipe.map((m, i) => (
       <Reveal key={m.iniciais} delay={i * 0.08}>
-        <article className="glass glow-blue h-full rounded-2xl p-6 transition-all duration-300">
+        <article className="glass card-interactive h-full rounded-2xl p-6">
           {/* Avatar com iniciais */}
           <div
             aria-hidden="true"
-            className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-deep to-neon font-display text-lg font-semibold shadow-[0_0_20px_rgba(79,169,225,.3)]"
+            className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-deep to-neon font-display text-lg font-semibold"
           >
             {m.iniciais}
           </div>

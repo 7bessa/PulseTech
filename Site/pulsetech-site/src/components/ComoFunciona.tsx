@@ -17,7 +17,7 @@ export default function ComoFunciona() {
           <div className="absolute left-[12%] right-[12%] top-6 hidden h-px bg-gradient-to-r from-transparent via-neon/40 to-transparent md:block" />
           {passos.map((p, i) => (
             <Reveal key={p.titulo} delay={i * 0.1} className="relative text-center">
-              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-neon bg-bg font-display text-neon shadow-[0_0_20px_rgba(79,169,225,.45)]">
+              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-neon/60 bg-bg font-display text-neon">
                 {i + 1}
               </div>
               <h3 className="mt-5 font-display text-lg font-medium">{p.titulo}</h3>

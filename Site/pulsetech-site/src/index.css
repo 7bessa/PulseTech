@@ -34,9 +34,11 @@ html[data-theme="dark"] [data-theme-toggle-icon="dark"], html[data-theme="light"
 /* Vidro fosco */
 .glass { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); backdrop-filter: blur(14px); }
 html[data-theme="light"] .glass { background: rgba(255,255,255,.62); border-color: rgba(16,34,56,.12); }
-.glow-green { box-shadow: 0 0 24px rgba(46,204,113,.45); transition: box-shadow .3s, transform .3s; }
-.glow-green:hover { box-shadow: 0 0 40px rgba(46,204,113,.7); transform: translateY(-1px); }
-.glow-blue:hover { border-color: rgba(79,169,225,.5); box-shadow: 0 0 32px rgba(79,169,225,.2); }
+.primary-action { transition: background-color .18s ease, transform .18s ease; }
+.primary-action:hover { background-color: #41d17d; transform: translateY(-1px); }
+.primary-action:focus-visible { outline: 2px solid var(--color-neon); outline-offset: 3px; }
+.card-interactive { transition: border-color .18s ease, background-color .18s ease; }
+.card-interactive:hover { border-color: rgba(79,169,225,.32); background-color: rgba(79,169,225,.06); }
 
 /* Malha de pontos */
 .dots {
@@ -44,10 +46,6 @@ html[data-theme="light"] .glass { background: rgba(255,255,255,.62); border-colo
   background-size: 32px 32px;
   mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
 }
-
-/* Cubo wireframe */
-.cube { position: relative; width: 160px; height: 160px; transform-style: preserve-3d; }
-.cube div { position: absolute; inset: 0; border: 1px solid rgba(79,169,225,.55); background: rgba(79,169,225,.04); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto !important; }

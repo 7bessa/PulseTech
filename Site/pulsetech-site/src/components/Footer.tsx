@@ -3,10 +3,7 @@ const currentYear = new Date().getFullYear();
 export default function Footer() {
   return (
     <footer className="relative bg-bg pb-10 pt-16">
-      {/* Linha de pulso decorativa no topo */}
-      <svg className="absolute inset-x-0 top-0 h-8 w-full opacity-40" viewBox="0 0 1200 30" preserveAspectRatio="none" fill="none" stroke="#4FA9E1" strokeWidth="1.2">
-        <polyline points="0,15 450,15 480,15 500,3 525,27 545,9 560,15 1200,15" />
-      </svg>
+      <div aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neon/45 to-transparent" />
       <div className="mx-auto max-w-6xl px-5 text-center">
         <p className="font-display text-xl font-semibold">PulseTech</p>
         <p className="mt-2 text-sm text-mute">Sua operação com pulso. Seus dados em movimento.</p>
