@@ -6,7 +6,7 @@ export default function Hero() {
           <h1 className="font-display text-6xl font-bold tracking-tight md:text-7xl">PulseTech</h1>
           <p className="mt-4 font-display text-xl text-neon md:text-2xl">Sua operação com pulso. Seus dados em movimento.</p>
           <p className="mt-5 text-mute">
-            Transformamos planilhas em dashboards inteligentes e processos automatizados — sem trocar todo o seu sistema.
+            Transformamos planilhas em dashboards inteligentes e automatizamos processos, sem trocar todo o seu sistema.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a href="#contato" className="primary-action rounded-lg bg-green px-6 py-3 font-medium text-bg">Começar agora</a>
