@@ -40,13 +40,6 @@ html[data-theme="light"] .glass { background: rgba(255,255,255,.62); border-colo
 .card-interactive { transition: border-color .18s ease, background-color .18s ease; }
 .card-interactive:hover { border-color: rgba(79,169,225,.32); background-color: rgba(79,169,225,.06); }
 
-/* Malha de pontos */
-.dots {
-  background-image: radial-gradient(rgba(79,169,225,.35) 1px, transparent 1px);
-  background-size: 32px 32px;
-  mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
-}
-
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto !important; }
   *, *::before, *::after { transition-duration: .01ms !important; }
@@ -55,5 +48,4 @@ html[data-theme="light"] .glass { background: rgba(255,255,255,.62); border-colo
 @media (max-width: 767px) {
   header.glass { background: rgba(8, 13, 25, .96); backdrop-filter: none; }
   html[data-theme="light"] header.glass { background: rgba(245, 248, 252, .96); }
-  .dots { mask-image: none; background-size: 40px 40px; opacity: .55; }
 }
