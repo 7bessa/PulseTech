@@ -48,8 +48,6 @@ export default function Hero() {
             </defs>
 
             {/* Linhas de conexão atrás do painel */}
-            <circle cx="316" cy="230" r="198" stroke="#3275A1" strokeDasharray="3 10" strokeOpacity=".32" />
-            <circle cx="316" cy="230" r="224" stroke="#3275A1" strokeOpacity=".13" />
             <path d="M30 197h43c14 0 18-24 32-24h20m366 123h36c12 0 17 18 29 18h30" stroke="#4FA9E1" strokeOpacity=".52" strokeWidth="1.5" />
             <circle cx="72" cy="197" r="3" fill="#58E0C0" />
             <circle cx="586" cy="314" r="3" fill="#58E0C0" />
