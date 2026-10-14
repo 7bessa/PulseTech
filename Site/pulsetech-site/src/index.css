@@ -53,12 +53,32 @@ html[data-theme="light"] .glass { background: rgba(255,255,255,.62); border-colo
 .primary-action { transition: background-color .18s ease, transform .18s ease; }
 .primary-action:hover { background-color: #41d17d; transform: translateY(-1px); }
 .primary-action:focus-visible { outline: 2px solid var(--color-neon); outline-offset: 3px; }
-.card-interactive { transition: border-color .18s ease, background-color .18s ease; }
+.card-interactive { transition: transform .22s ease, border-color .18s ease, background-color .18s ease; }
 .card-interactive:hover { border-color: rgba(79,169,225,.32); background-color: rgba(79,169,225,.06); }
+.card-interactive > svg { transition: transform .22s ease; }
+
+@media (prefers-reduced-motion: no-preference) {
+  html.motion-ready [data-reveal] {
+    transition: opacity .42s cubic-bezier(.2,.65,.3,1), transform .42s cubic-bezier(.2,.65,.3,1);
+  }
+  html.motion-ready [data-reveal]:not([data-visible="true"]) {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+  }
+}
+
+@media (hover: hover) {
+  .card-interactive:hover { transform: translateY(-3px); }
+  .card-interactive:hover > svg { transform: translateY(-2px) scale(1.04); }
+  a.glass:hover, button.glass:hover { transform: translateY(-1px); }
+  .hero-visual:hover { transform: translateY(-3px); }
+}
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto !important; }
-  *, *::before, *::after { transition-duration: .01ms !important; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-delay: .01ms !important; transition-duration: .01ms !important; }
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+  .card-interactive:hover, a.glass:hover, button.glass:hover, .hero-visual:hover { transform: none; }
 }
 
 @media (max-width: 767px) {

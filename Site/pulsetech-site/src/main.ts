@@ -22,6 +22,26 @@ themeButton?.addEventListener('click', () => {
   }
 });
 
+const revealElements = document.querySelectorAll<HTMLElement>('[data-reveal]');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (revealElements.length > 0 && !prefersReducedMotion && 'IntersectionObserver' in window) {
+  let remaining = revealElements.length;
+  const revealObserver = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      (entry.target as HTMLElement).dataset.visible = 'true';
+      revealObserver.unobserve(entry.target);
+      remaining -= 1;
+    }
+
+    if (remaining === 0) revealObserver.disconnect();
+  }, { rootMargin: '0px 0px -24px 0px', threshold: 0.08 });
+
+  document.documentElement.classList.add('motion-ready');
+  revealElements.forEach((element) => revealObserver.observe(element));
+}
+
 const contactForm = document.querySelector<HTMLFormElement>('[data-contact-form]');
 contactForm?.addEventListener('submit', (event) => {
   event.preventDefault();
