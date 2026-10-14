@@ -11,7 +11,7 @@ const links = [
 export default function Navbar() {
   return (
     <header className="glass fixed inset-x-0 top-0 z-50 border-x-0 border-t-0">
-      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
+      <nav aria-label="Navegação principal" className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
         <a href="#top" className="flex items-center gap-2 font-display text-lg font-semibold">
           <svg aria-hidden="true" width="28" height="20" viewBox="0 0 28 20" fill="none">
             <rect x="2" y="10" width="4" height="8" rx="1.5" fill="#4FA9E1" fillOpacity=".62" />

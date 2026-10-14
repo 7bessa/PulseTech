@@ -16,6 +16,7 @@ html[data-theme="light"] {
   color-scheme: light;
   --color-bg: #F5F8FC;
   --color-bg2: #EAF1F8;
+  --color-neon: #2F6F98;
   --color-deep: #CDE5F7;
   --color-green: #137C44;
   --color-tx: #102238;
@@ -28,6 +29,21 @@ html[data-theme="dark"] {
 
 html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 body { background: var(--color-bg); color: var(--color-tx); font-family: var(--font-sans); transition: background-color .25s, color .25s; }
+
+.skip-link {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 100;
+  transform: translateY(-200%);
+  border-radius: .5rem;
+  background: var(--color-tx);
+  color: var(--color-bg);
+  padding: .75rem 1rem;
+  font-weight: 600;
+}
+.skip-link:focus-visible { transform: translateY(0); }
+:focus-visible { outline: 2px solid var(--color-neon); outline-offset: 3px; }
 
 html[data-theme="dark"] [data-theme-toggle-icon="dark"], html[data-theme="light"] [data-theme-toggle-icon="light"] { display: none; }
 

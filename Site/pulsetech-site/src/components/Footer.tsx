@@ -7,13 +7,13 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-5 text-center">
         <p className="font-display text-xl font-semibold">PulseTech</p>
         <p className="mt-2 text-sm text-mute">Sua operação com pulso. Seus dados em movimento.</p>
-        <nav className="mt-6 flex flex-wrap justify-center gap-6 text-sm text-mute">
+        <nav aria-label="Navegação do rodapé" className="mt-6 flex flex-wrap justify-center gap-6 text-sm text-mute">
           <a href="#servicos" className="hover:text-tx">Serviços</a>
           <a href="#diferenciais" className="hover:text-tx">Diferenciais</a>
           <a href="#como-funciona" className="hover:text-tx">Como Funciona</a>
           <a href="#contato" className="hover:text-tx">Contato</a>
         </nav>
-        <small className="mt-8 block text-xs text-mute/70">© {currentYear} PulseTech. Todos os direitos reservados.</small>
+        <small className="mt-8 block text-xs text-mute">© {currentYear} PulseTech. Todos os direitos reservados.</small>
       </div>
     </footer>
   );
