@@ -57,6 +57,123 @@ html[data-theme="light"] .glass { background: rgba(255,255,255,.62); border-colo
 .card-interactive:hover { border-color: rgba(79,169,225,.32); background-color: rgba(79,169,225,.06); }
 .card-interactive > svg { transition: transform .22s ease; }
 
+/* Hero illustration: a lightweight, CSS-built automation dashboard. */
+.hero-scene {
+  --hero-panel: #0b1421;
+  --hero-panel-raised: #101d2c;
+  --hero-panel-border: rgba(117, 164, 193, .2);
+  --hero-grid: rgba(114, 159, 188, .12);
+  --hero-soft: #94a9ba;
+  --hero-bright: #eaf4fb;
+  --hero-accent: #59b9ef;
+  --hero-success: #58dfbd;
+  position: relative;
+  isolation: isolate;
+  aspect-ratio: 1.25;
+  padding: 2.25rem .6rem 1.75rem;
+  color: var(--hero-bright);
+  perspective: 1100px;
+  transition: transform .25s ease;
+}
+.hero-scene::before {
+  position: absolute;
+  z-index: -1;
+  inset: 12% 3% 8%;
+  border-radius: 2rem;
+  background: linear-gradient(135deg, rgba(35, 128, 183, .14), transparent 48%, rgba(38, 189, 164, .08));
+  content: "";
+  filter: blur(26px);
+}
+.hero-dashboard {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  padding: clamp(1rem, 3.5vw, 1.5rem);
+  border: 1px solid var(--hero-panel-border);
+  border-radius: 1.05rem;
+  background: linear-gradient(145deg, rgba(13, 27, 42, .98), rgba(7, 15, 26, .98));
+  box-shadow: 0 24px 58px rgba(0, 0, 0, .24), inset 0 1px rgba(255, 255, 255, .045);
+  transform: rotateY(-6deg) rotateX(2deg) translateZ(0);
+  transform-style: preserve-3d;
+  animation: hero-dashboard-enter .65s cubic-bezier(.2, .7, .2, 1) both;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.hero-dashboard-top, .hero-dashboard-heading, .hero-panel-heading, .hero-dashboard-footer { display: flex; align-items: center; }
+.hero-dashboard-top { min-height: 2.1rem; gap: .65rem; padding-bottom: .8rem; border-bottom: 1px solid var(--hero-panel-border); }
+.hero-brand-mark { display: flex; align-items: end; gap: 2px; height: 15px; padding: 1px 0; }
+.hero-brand-mark span { width: 3px; border-radius: 2px; background: var(--hero-accent); }
+.hero-brand-mark span:nth-child(1) { height: 7px; opacity: .7; }
+.hero-brand-mark span:nth-child(2) { height: 11px; opacity: .85; }
+.hero-brand-mark span:nth-child(3) { height: 15px; }
+.hero-dashboard-name { display: flex; flex-direction: column; gap: 2px; }
+.hero-dashboard-name span:first-child { font-size: .68rem; font-weight: 700; letter-spacing: .08em; }
+.hero-dashboard-name span:last-child, .hero-eyebrow, .hero-flow-caption { color: var(--hero-soft); font-size: .48rem; letter-spacing: .12em; }
+.hero-demo-tag { margin-left: auto; padding: .35rem .48rem; border: 1px solid var(--hero-panel-border); border-radius: .42rem; color: var(--hero-soft); font-size: .45rem; letter-spacing: .08em; white-space: nowrap; }
+.hero-dashboard-heading { justify-content: space-between; gap: .5rem; margin: 1.1rem 0 .8rem; }
+.hero-dashboard-heading h2 { margin: .22rem 0 0; font-size: clamp(.86rem, 2.7vw, 1rem); font-weight: 650; letter-spacing: -.025em; }
+.hero-view-tag { padding: .34rem .52rem; border: 1px solid var(--hero-panel-border); border-radius: .45rem; color: var(--hero-soft); font-size: .55rem; white-space: nowrap; }
+.hero-workflow-layout { display: grid; grid-template-columns: minmax(0, 1fr) 4rem minmax(0, 1.1fr); align-items: center; }
+.hero-mini-panel { min-width: 0; min-height: 9.7rem; padding: .72rem; border: 1px solid var(--hero-panel-border); border-radius: .75rem; background: linear-gradient(155deg, var(--hero-panel-raised), var(--hero-panel)); box-shadow: inset 0 1px rgba(255, 255, 255, .025); }
+.hero-panel-heading { gap: .43rem; color: var(--hero-bright); font-size: .63rem; font-weight: 600; }
+.hero-panel-icon { display: grid; width: 1.35rem; height: 1.35rem; flex: 0 0 auto; place-items: center; border: 1px solid rgba(79, 169, 225, .2); border-radius: .4rem; color: var(--hero-accent); background: rgba(79, 169, 225, .08); }
+.hero-sheet-icon { grid-template-columns: repeat(2, 3px); grid-template-rows: repeat(2, 3px); gap: 2px; }
+.hero-sheet-icon i { width: 3px; height: 3px; border-radius: 1px; background: var(--hero-accent); }
+.hero-sheet-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; margin-top: .8rem; }
+.hero-sheet-grid span { height: .8rem; border: 1px solid var(--hero-grid); border-radius: 2px; background: rgba(95, 150, 185, .045); }
+.hero-sheet-grid span:nth-child(3n + 1) { background: rgba(79, 169, 225, .1); }
+.hero-source-caption { display: flex; align-items: center; gap: .35rem; margin-top: .62rem; color: var(--hero-soft); font-size: .5rem; }
+.hero-source-caption span, .hero-footer-node i { width: 5px; height: 5px; flex: 0 0 auto; border-radius: 50%; background: var(--hero-success); }
+.hero-flow-bridge { display: flex; min-width: 0; flex-direction: column; align-items: center; gap: .38rem; }
+.hero-flow-line { position: relative; width: 100%; height: 1px; background: linear-gradient(90deg, transparent, rgba(79, 169, 225, .55)); }
+.hero-flow-line-reverse { background: linear-gradient(90deg, rgba(88, 223, 189, .55), transparent); }
+.hero-flow-line i { position: absolute; top: -2px; left: 0; width: 5px; height: 5px; border-radius: 50%; background: var(--hero-accent); box-shadow: 0 0 7px rgba(79, 169, 225, .42); animation: hero-flow-travel 2.7s ease-in-out infinite alternate; }
+.hero-flow-line-reverse i { right: 0; left: auto; background: var(--hero-success); animation-direction: alternate-reverse; }
+.hero-flow-icon { display: grid; width: 2rem; height: 2rem; place-items: center; border: 1px solid rgba(79, 169, 225, .24); border-radius: .65rem; color: var(--hero-accent); background: linear-gradient(145deg, rgba(79, 169, 225, .16), rgba(88, 223, 189, .08)); box-shadow: 0 5px 16px rgba(0, 0, 0, .16); }
+.hero-flow-caption { font-size: .42rem; white-space: nowrap; }
+.hero-chart-title { display: flex; justify-content: space-between; margin-top: .78rem; color: var(--hero-soft); font-size: .51rem; }
+.hero-chart-title span { color: var(--hero-success); font-size: .5rem; }
+.hero-chart { position: relative; display: flex; height: 3.65rem; flex-direction: column; justify-content: space-between; margin-top: .28rem; }
+.hero-chart > span { width: 100%; height: 1px; background: var(--hero-grid); }
+.hero-chart svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.hero-chart path { fill: none; stroke: var(--hero-accent); stroke-width: 2; stroke-linecap: round; filter: drop-shadow(0 0 3px rgba(79, 169, 225, .22)); animation: hero-chart-draw .8s .35s ease-out both; }
+.hero-chart-labels { display: flex; justify-content: space-between; margin-top: .32rem; color: var(--hero-soft); font-size: .43rem; }
+.hero-dashboard-footer { gap: .45rem; margin-top: .9rem; padding-top: .7rem; border-top: 1px solid var(--hero-panel-border); color: var(--hero-soft); font-size: .5rem; }
+.hero-footer-node { display: flex; min-width: 0; align-items: center; gap: .3rem; white-space: nowrap; }
+.hero-footer-node i { width: 4px; height: 4px; }
+.hero-footer-line { height: 1px; min-width: 8px; flex: 1; background: linear-gradient(90deg, rgba(88, 223, 189, .35), rgba(79, 169, 225, .35)); }
+.hero-footer-arrow { display: grid; width: 1.35rem; height: 1.35rem; flex: 0 0 auto; place-items: center; border: 1px solid var(--hero-panel-border); border-radius: 50%; color: var(--hero-accent); }
+.hero-float-card { position: absolute; right: .15rem; bottom: .15rem; display: flex; align-items: center; gap: .55rem; padding: .7rem .85rem; border: 1px solid var(--hero-panel-border); border-radius: .8rem; color: var(--hero-bright); background: linear-gradient(145deg, rgba(17, 33, 49, .98), rgba(10, 22, 35, .98)); box-shadow: 0 12px 32px rgba(0, 0, 0, .25); animation: hero-float 5s ease-in-out infinite; }
+.hero-float-icon { display: grid; width: 2rem; height: 2rem; place-items: center; border-radius: .55rem; color: var(--hero-success); background: rgba(88, 223, 189, .1); }
+.hero-float-card > span:nth-child(2) { display: grid; gap: .2rem; }
+.hero-float-card strong { font-size: .62rem; font-weight: 600; }
+.hero-float-card small { color: var(--hero-soft); font-size: .53rem; }
+.hero-float-check { display: grid; width: 1.15rem; height: 1.15rem; margin-left: .2rem; place-items: center; border-radius: 50%; color: #071b19; background: var(--hero-success); font-size: .7rem; font-weight: 700; }
+@keyframes hero-dashboard-enter { from { opacity: 0; transform: translate3d(0, 12px, 0) rotateY(-6deg) rotateX(2deg); } to { opacity: 1; transform: rotateY(-6deg) rotateX(2deg) translateZ(0); } }
+@keyframes hero-chart-draw { from { opacity: .25; transform: translateY(3px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes hero-flow-travel { from { transform: translateX(2px); } to { transform: translateX(calc(100% - 5px)); } }
+@keyframes hero-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .hero-scene:hover .hero-dashboard { transform: rotateY(-2deg) rotateX(1deg) translateY(-2px); box-shadow: 0 28px 62px rgba(0, 0, 0, .3), inset 0 1px rgba(255, 255, 255, .045); }
+}
+@media (max-width: 767px) {
+  .hero-scene { aspect-ratio: auto; padding: 1.5rem .1rem 2.3rem; }
+  .hero-dashboard { min-height: 18rem; padding: .9rem; transform: none; }
+  .hero-workflow-layout { grid-template-columns: minmax(0, 1fr) 2.8rem minmax(0, 1.1fr); }
+  .hero-mini-panel { min-height: 9.25rem; padding: .58rem; }
+  .hero-flow-icon { width: 1.75rem; height: 1.75rem; }
+  .hero-dashboard-footer { gap: .3rem; font-size: .45rem; }
+  .hero-footer-arrow { width: 1.15rem; height: 1.15rem; }
+  .hero-float-card { right: .1rem; bottom: .2rem; }
+}
+@media (max-width: 370px) {
+  .hero-demo-tag { padding: .3rem; font-size: .4rem; }
+  .hero-dashboard-heading h2 { font-size: .82rem; }
+  .hero-view-tag { padding: .3rem; font-size: .49rem; }
+  .hero-mini-panel { padding: .48rem; }
+  .hero-footer-node { font-size: .42rem; }
+  .hero-float-card { padding: .58rem .7rem; }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   html.motion-ready [data-reveal] {
     transition: opacity .42s cubic-bezier(.2,.65,.3,1), transform .42s cubic-bezier(.2,.65,.3,1);

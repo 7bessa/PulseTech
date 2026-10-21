@@ -1,3 +1,5 @@
+import { ArrowRight, LayoutDashboard, Workflow } from 'lucide-react';
+
 export default function Hero() {
   return (
     <section id="top" className="relative flex min-h-screen items-center overflow-hidden bg-bg pb-16 pt-28">
@@ -14,46 +16,80 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hero-visual order-2 w-full max-w-[540px] self-center md:order-2 md:flex-1">
-          <svg
-            aria-labelledby="hero-visual-title hero-visual-description"
-            className="h-auto w-full"
-            fill="none"
-            role="img"
-            viewBox="0 0 620 430"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title id="hero-visual-title">Ícone 3D PulseTech</title>
-            <desc id="hero-visual-description">Cubo tecnológico em perspectiva com um traço de pulso, representando dados e automação.</desc>
-            <defs>
-              <linearGradient id="pulse-cube-top" x1="130" y1="65" x2="468" y2="250" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#17364A" />
-                <stop offset=".55" stopColor="#1C5268" />
-                <stop offset="1" stopColor="#17384C" />
-              </linearGradient>
-              <linearGradient id="pulse-cube-left" x1="112" y1="181" x2="296" y2="354" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#142A3B" />
-                <stop offset="1" stopColor="#0A1825" />
-              </linearGradient>
-              <linearGradient id="pulse-cube-right" x1="330" y1="283" x2="524" y2="197" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#102536" />
-                <stop offset="1" stopColor="#1C5368" />
-              </linearGradient>
-              <linearGradient id="pulse-cube-line" x1="164" y1="161" x2="456" y2="161" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#4FA9E1" />
-                <stop offset="1" stopColor="#58E0C0" />
-              </linearGradient>
-            </defs>
+        <div
+          className="hero-visual hero-scene order-2 w-full max-w-[540px] self-center md:order-2 md:flex-1"
+          role="img"
+          aria-label="Demonstração visual de planilhas conectadas a um painel por fluxos de automação"
+        >
+          <div className="hero-dashboard" aria-hidden="true">
+            <div className="hero-dashboard-top">
+              <div className="hero-brand-mark"><span /><span /><span /></div>
+              <div className="hero-dashboard-name">
+                <span>PulseTech</span>
+                <span>PAINEL DE OPERAÇÕES</span>
+              </div>
+              <span className="hero-demo-tag">VISUAL ILUSTRATIVO</span>
+            </div>
 
-            <polygon points="310 35 530 160 310 285 90 160" fill="url(#pulse-cube-top)" stroke="#4D8199" strokeOpacity=".7" strokeLinejoin="round" />
-            <polygon points="90 160 310 285 310 415 90 290" fill="url(#pulse-cube-left)" stroke="#36556A" strokeOpacity=".7" strokeLinejoin="round" />
-            <polygon points="310 285 530 160 530 290 310 415" fill="url(#pulse-cube-right)" stroke="#44748A" strokeOpacity=".7" strokeLinejoin="round" />
+            <div className="hero-dashboard-heading">
+              <div>
+                <span className="hero-eyebrow">DADOS E PROCESSOS</span>
+                <h2>Visão da operação</h2>
+              </div>
+              <span className="hero-view-tag">Visão unificada</span>
+            </div>
 
-            <path d="M310 285v130" stroke="#4A7185" strokeOpacity=".55" />
-            <path d="M164 160h80l26-32 31 66 29-50 23 30h103" stroke="url(#pulse-cube-line)" strokeWidth="9" strokeOpacity=".16" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M164 160h80l26-32 31 66 29-50 23 30h103" stroke="url(#pulse-cube-line)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-            <circle cx="456" cy="174" r="4" fill="#58E0C0" />
-          </svg>
+            <div className="hero-workflow-layout">
+              <div className="hero-mini-panel hero-source-panel">
+                <div className="hero-panel-heading">
+                  <span className="hero-panel-icon hero-sheet-icon"><i /><i /><i /><i /></span>
+                  <span>Planilhas</span>
+                </div>
+                <div className="hero-sheet-grid">
+                  <span /><span /><span />
+                  <span /><span /><span />
+                  <span /><span /><span />
+                  <span /><span /><span />
+                </div>
+                <div className="hero-source-caption"><span /> Dados organizados</div>
+              </div>
+
+              <div className="hero-flow-bridge">
+                <span className="hero-flow-line"><i /></span>
+                <span className="hero-flow-icon"><Workflow size={18} strokeWidth={1.7} /></span>
+                <span className="hero-flow-caption">AUTOMAÇÃO</span>
+                <span className="hero-flow-line hero-flow-line-reverse"><i /></span>
+              </div>
+
+              <div className="hero-mini-panel hero-output-panel">
+                <div className="hero-panel-heading">
+                  <span className="hero-panel-icon"><LayoutDashboard size={16} strokeWidth={1.7} /></span>
+                  <span>Dashboard</span>
+                </div>
+                <div className="hero-chart-title">Resumo visual <span>●</span></div>
+                <div className="hero-chart">
+                  <span /><span /><span /><span /><span /><span /><span />
+                  <svg viewBox="0 0 180 66" preserveAspectRatio="none">
+                    <path d="M2 55 C20 51 22 41 40 45 S62 49 78 34 S99 38 116 26 S138 31 153 16 S169 19 178 7" />
+                  </svg>
+                </div>
+                <div className="hero-chart-labels"><span>Processos</span><span>Relatórios</span></div>
+              </div>
+            </div>
+
+            <div className="hero-dashboard-footer">
+              <span className="hero-footer-node"><i /> Dados conectados</span>
+              <span className="hero-footer-line" />
+              <span className="hero-footer-node"><i /> Fluxos automatizados</span>
+              <span className="hero-footer-arrow"><ArrowRight size={14} /></span>
+            </div>
+          </div>
+
+          <div className="hero-float-card" aria-hidden="true">
+            <span className="hero-float-icon"><Workflow size={16} strokeWidth={1.8} /></span>
+            <span><strong>Fluxo conectado</strong><small>Planilha → painel</small></span>
+            <span className="hero-float-check">✓</span>
+          </div>
         </div>
       </div>
     </section>
