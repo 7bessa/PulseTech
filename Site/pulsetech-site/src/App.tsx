@@ -2,6 +2,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Problema from './components/Problema';
 import Servicos from './components/Servicos';
+import Portfolio from './components/Portfolio';
 import Diferenciais from './components/Diferenciais';
 import ComoFunciona from './components/ComoFunciona';
 import Equipe from './components/Equipe';
@@ -17,6 +18,7 @@ export default function App() {
         <Hero />
         <Problema />
         <Servicos />
+        <Portfolio />
         <Diferenciais />
         <ComoFunciona />
         <Equipe />

@@ -11,6 +11,7 @@ export default function Footer() {
         <p className="mt-2 text-sm text-mute">Sua operação com pulso. Seus dados em movimento.</p>
         <nav aria-label="Navegação do rodapé" className="mt-6 flex flex-wrap justify-center gap-6 text-sm text-mute">
           <a href="#servicos" className="hover:text-tx">Serviços</a>
+          <a href="#portfolio" className="hover:text-tx">Portfólio</a>
           <a href="#diferenciais" className="hover:text-tx">Diferenciais</a>
           <a href="#como-funciona" className="hover:text-tx">Como Funciona</a>
           <a href="#contato" className="hover:text-tx">Contato</a>
