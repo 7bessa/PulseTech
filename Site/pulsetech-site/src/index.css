@@ -50,8 +50,8 @@ html[data-theme="dark"] [data-theme-toggle-icon="dark"], html[data-theme="light"
 /* Vidro fosco */
 .glass { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); backdrop-filter: blur(14px); }
 html[data-theme="light"] .glass { background: rgba(255,255,255,.62); border-color: rgba(16,34,56,.12); }
-.primary-action { transition: background-color .18s ease, transform .18s ease; }
-.primary-action:hover { background-color: #41d17d; transform: translateY(-1px); }
+.primary-action { background-color: #0066B8; color: #fff; transition: background-color .18s ease, transform .18s ease; }
+.primary-action:hover { background-color: #00589F; transform: translateY(-1px); }
 .primary-action:focus-visible { outline: 2px solid var(--color-neon); outline-offset: 3px; }
 .card-interactive { transition: transform .22s ease, border-color .18s ease, background-color .18s ease; }
 .card-interactive:hover { border-color: rgba(79,169,225,.32); background-color: rgba(79,169,225,.06); }

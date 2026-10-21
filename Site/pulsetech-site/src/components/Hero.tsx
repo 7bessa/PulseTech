@@ -9,7 +9,7 @@ export default function Hero() {
             Transformamos planilhas em dashboards inteligentes e automatizamos processos, sem trocar todo o seu sistema.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <a href="#contato" className="primary-action rounded-lg bg-green px-6 py-3 font-medium text-bg">Começar agora</a>
+            <a href="#contato" className="primary-action rounded-lg px-6 py-3 font-medium">Começar agora</a>
             <a href="#servicos" className="glass rounded-lg px-6 py-3 font-medium transition-colors hover:border-neon/50">Ver serviços</a>
           </div>
         </div>

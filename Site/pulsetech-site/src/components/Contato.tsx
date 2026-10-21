@@ -18,7 +18,7 @@ export default function Contato() {
           <input id="contato-email" name="email" type="email" autoComplete="email" placeholder="Seu e-mail" required className={campo} />
           <label className="sr-only" htmlFor="contato-mensagem">Como podemos ajudar?</label>
           <textarea id="contato-mensagem" name="mensagem" rows={4} placeholder="Como podemos ajudar?" required className={campo} />
-          <button type="submit" className="primary-action flex w-full items-center justify-center gap-2 rounded-lg bg-green py-3 font-medium text-bg">
+          <button type="submit" className="primary-action flex w-full items-center justify-center gap-2 rounded-lg py-3 font-medium">
             <Send size={16} strokeWidth={1.5} aria-hidden="true" /> Enviar mensagem
           </button>
         </form>

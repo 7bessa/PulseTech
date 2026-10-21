@@ -32,7 +32,7 @@ export default function Navbar() {
             <Sun size={18} data-theme-toggle-icon="light" aria-hidden="true" />
             <Moon size={18} data-theme-toggle-icon="dark" aria-hidden="true" />
           </button>
-          <a href="#contato" className="primary-action rounded-lg bg-green px-4 py-2 text-sm font-medium text-bg">Fale conosco</a>
+          <a href="#contato" className="primary-action rounded-lg px-4 py-2 text-sm font-medium">Fale conosco</a>
         </div>
       </nav>
     </header>
