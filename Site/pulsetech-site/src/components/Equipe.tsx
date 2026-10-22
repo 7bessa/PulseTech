@@ -55,7 +55,7 @@ const equipe: Membro[] = [
   {
     nome: 'Guilherme Barros Takata',
     cargo: 'QA / Frontend',
-    iniciais: 'Takata',
+    iniciais: 'Tk',
     responsabilidades: [
       'Desenvolve as interfaces dos dashboards',
       'Garante experiência visual clara e intuitiva',
