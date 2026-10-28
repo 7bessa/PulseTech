@@ -2,16 +2,16 @@ import Reveal from './Reveal';
 
 interface Membro {
   nome: string;
+  foto: string;
   cargo: string;
-  iniciais: string;
   responsabilidades: string[];
 }
 
 const equipe: Membro[] = [
   {
     nome: 'Cauã de Bessa Franco',
+    foto: '/equipe/caua-bessa.jpg',
     cargo: 'Gerente de Projetos / Scrum Master',
-    iniciais: 'CB',
     responsabilidades: [
       'Lidera o planejamento e a execução dos projetos',
       'Facilita cerimônias ágeis (Scrum/Kanban)',
@@ -21,8 +21,8 @@ const equipe: Membro[] = [
   },
   {
     nome: 'Miguel Pimenta de Brito',
+    foto: '/equipe/miguel-pimenta.jpg',
     cargo: 'Líder Técnico / Backend',
-    iniciais: 'MP',
     responsabilidades: [
       'Responsável pela arquitetura das soluções',
       'Desenvolve integrações e automações',
@@ -32,8 +32,8 @@ const equipe: Membro[] = [
   },
   {
     nome: 'Marcus Gabriel Peixoto',
+    foto: '/equipe/marcus-peixoto.jpg',
     cargo: 'QA / Frontend',
-    iniciais: 'MG',
     responsabilidades: [
       'Desenvolve as interfaces dos dashboards',
       'Garante experiência visual clara e intuitiva',
@@ -43,8 +43,8 @@ const equipe: Membro[] = [
   },
   {
     nome: 'Ana Gabrielly Costa Maciel',
+    foto: '/equipe/ana-gabrielly.jpg',
     cargo: 'Documentação / Fullstack',
-    iniciais: 'AC',
     responsabilidades: [
       'Responsável pela documentação técnica e de uso',
       'Atua no desenvolvimento fullstack das soluções',
@@ -54,8 +54,8 @@ const equipe: Membro[] = [
   },
   {
     nome: 'Guilherme Barros Takata',
+    foto: '/equipe/guilherme-takata.jpg',
     cargo: 'QA / Frontend',
-    iniciais: 'Tk',
     responsabilidades: [
       'Desenvolve as interfaces dos dashboards',
       'Garante experiência visual clara e intuitiva',
@@ -81,15 +81,18 @@ export default function Equipe() {
 
   function membros() {
     return equipe.map((m, i) => (
-      <Reveal key={m.iniciais} delay={i * 0.08}>
+      <Reveal key={m.nome} delay={i * 0.08}>
         <article className="glass card-interactive h-full rounded-2xl p-6">
-          {/* Avatar com iniciais */}
-          <div
+          <img
+            src={m.foto}
+            alt=""
             aria-hidden="true"
-            className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-deep to-neon font-display text-lg font-semibold"
-          >
-            {m.iniciais}
-          </div>
+            width={96}
+            height={96}
+            loading="lazy"
+            decoding="async"
+            className="mx-auto h-20 w-20 rounded-full border border-white/15 object-cover object-center"
+          />
           <h3 className="mt-4 text-center font-display text-lg font-medium">{m.nome}</h3>
           <p className="mt-1 text-center text-sm text-neon">{m.cargo}</p>
           <ul className="mt-5 space-y-2 text-sm text-mute">
