@@ -2,7 +2,7 @@ import { Send, Mail, MessageCircle } from 'lucide-react';
 import Reveal from './Reveal';
 
 const EMAIL = 'pulsetech7@outlook.com'
-const WHATSAPP = '5562982442850'; // TROCAR (DDI+DDD+número)
+const WHATSAPP = '5562995718537'; // DDI 55 + DDD 62 + número informado
 
 const campo = 'glass w-full rounded-lg px-4 py-3 text-tx placeholder:text-mute outline-none transition-colors focus:border-neon/60';
 
