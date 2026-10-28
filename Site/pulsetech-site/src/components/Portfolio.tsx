@@ -1,4 +1,5 @@
 import { ArrowUpRight, Check, Scissors, UsersRound, Wrench } from 'lucide-react';
+import CaseEstudo from './CaseEstudo';
 import Reveal from './Reveal';
 
 const projetos = [
@@ -69,6 +70,8 @@ export default function Portfolio() {
             </Reveal>
           ))}
         </div>
+
+        <CaseEstudo />
 
         <Reveal className="mt-10 text-center">
           <a href="#contato" className="inline-flex items-center gap-2 text-sm font-medium text-neon transition-colors hover:text-tx">
